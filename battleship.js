@@ -15,5 +15,8 @@ while (isSunk == false) {
   }
   else {
     guesses++;
+    if (guess == location1 || guess == location2 || guess == location3) {
+      hits++;
+    }
   }
 }
