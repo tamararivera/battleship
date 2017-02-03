@@ -15,16 +15,29 @@ while (!isSunk) {
   }
   else {
     guesses++;
-    if (guess == location1 || guess == location2 || guess == location3) {
+    
+    if (guess == location1) {
+      location1 = undefined;
       hits++;
       alert("HIT!");
-      if (hits == 3) {
-        isSunk = true;
-        alert("You sank my battleship!");
-      }
+      
+    } else if (guess == location2){
+      location2 = undefined;
+      hits++;
+      alert("HIT!");
+      
+    } else if (guess == location3){
+      location3 = undefined;
+      hits++;
+      alert("HIT!");
     }
     else {
       alert("MISS");
+    }
+    
+    if (hits == 3) {
+      isSunk = true;
+      alert("You sank my battleship!");
     }
   }
 }
